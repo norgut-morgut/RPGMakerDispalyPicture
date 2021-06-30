@@ -1,1 +1,1 @@
-# RPGMakerDispalyPicture
+# RPGMakerDisplayPicture
