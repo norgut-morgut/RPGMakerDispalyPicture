@@ -1,0 +1,52 @@
+*********************************************
+* Afficher une image dans RPG MAKER VX Ace  * 
+*********************************************
+
+Dans de nombreux projets de serious game créé avec RPG MAKER VX ACE on aura besoins d'afficher une image que ce soit pour lancer une intro, donner une information en cours de jeu ou afficher les crédits de fin.
+A la suite de cet article vous serez en mesure d'intégrer des images à votre projet, de les afficher ou de les supprimer au cours d'un événement.
+
+1 - Intégrer une image dans le projet :
+
+Pour intégrer une image, il faut se rendre dans le gestionnaire de ressources (F10).
+Sélectionner dans la collone de gauche "Graphics/Pictures".
+Cliquer sur le bouton "Importer" puis aller chercher l'image sur votre ordinateur.
+La fenêtre de gestion des tranprences s'affiche.
+Si on veut qu'aucune couleur de l'image devienne transparente, cliquer sur les 2 boutons "Vider".
+Sinon cliquer sur une couleur de l'image avec le click gauche.
+Valider les options avec le bouton "OK".
+Dans le gestionnaire de ressources, On peut à tout moment avoir un arperçu de l'importation de l'image avec le bouton "aperçu".
+
+2 - Afficher une image lors d'un événement :
+
+Un fois l'événement créé, double cliquer dans l'espace "Commandes de l'événement".
+Choisir "Afficher une image..." dans le 2ème onglet.
+Dans la fenêtre "Afficher une image" :
+
+A : affecter un numéro à l'image
+B : séléctionner l'image dans le gestionnaire de ressources
+C : positionner l'image en choississant le point d'origine de l'image (en haut à gauche ou au centre) et son positionnement en pixel.
+Attention le fait de choisir "point d'origine" au centre fait bugger l'application en cours de jeu avec la version "lite".
+D : agrandir ou rétressir l'image en pourcentage.
+F : rendre l'image plus ou moins transparente (255 opaque - 0 complétement transparent).
+
+Valider les options choisis avec le bouton "OK" puis valider l'événement.
+
+3 - Supprimer une image lors d'un événement :
+
+Le problème, c'est qu'une fois affichée l'image reste toujours en jeu si on lui ordonne pas de disparaitre. Pour cela :
+Double cliquer dans l'espace "Commandes de l'événement".
+Choisir "Effacer une image..." dans le 2ème onglet.
+Dans la fenêtre "supprimer une image" sélectionner le numéro de l'image qu'on souhaite faire disparaitre puis valider.
+
+4 - Avoir le temps de voir l'image :
+
+Si aucune action n'est demandée au joueur entre le moment où s'affiche l'image et le moment où on la supprime, on risque de ne pas du tout voir l'image.
+En effets les 2 commandes se déroule beaucoup trop rapidement pour que le joueur aperçoive quelque chose.
+Il faut donc placer un temps d'attente entre l'affichage et la suppresion de l'image. pour cela :
+Double cliquer dans l'espace "Commandes de l'événement".
+Choisir "Attendre.." dans le 2ème onglet.
+Puis choisir le nombre frames d'attente et valider avec "OK".
+En sachant que sur un ordinateur véloce, RPG Maker en mode jeu tourne à 60 frames (images)/seconde. Donc si on veut que l'image s'affiche pendant 3 secondes, il faudra indiquer 180 frames.
+Attention : Pendant le temps d'attente, le joueur n'as plus le contrôle du personnage.
+
+Et voilà l'image s'affiche pendant 3 secondes et disparait en suite.
